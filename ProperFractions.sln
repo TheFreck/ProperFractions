@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34511.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProperFractions", "ProperFractions\ProperFractions.csproj", "{BBEAC596-F2C7-4642-ACBF-4A59DE78CFA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProperFractions.Specs", "ProperFractions.Specs\ProperFractions.Specs.csproj", "{5664E994-5A82-4F96-BF21-336364CDF65C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BBEAC596-F2C7-4642-ACBF-4A59DE78CFA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBEAC596-F2C7-4642-ACBF-4A59DE78CFA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBEAC596-F2C7-4642-ACBF-4A59DE78CFA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBEAC596-F2C7-4642-ACBF-4A59DE78CFA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5664E994-5A82-4F96-BF21-336364CDF65C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5664E994-5A82-4F96-BF21-336364CDF65C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5664E994-5A82-4F96-BF21-336364CDF65C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5664E994-5A82-4F96-BF21-336364CDF65C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2CC3F18E-1A85-461B-9AB9-E844FCB906FF}
+	EndGlobalSection
+EndGlobal

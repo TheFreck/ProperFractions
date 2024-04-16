@@ -1,0 +1,15 @@
+C:\Users\chris.freckleton\source\repos\Katas\ProperFractions\ProperFractions\ProperFractions\bin\Debug\net8.0\ProperFractions.exe
+C:\Users\chris.freckleton\source\repos\Katas\ProperFractions\ProperFractions\ProperFractions\bin\Debug\net8.0\ProperFractions.deps.json
+C:\Users\chris.freckleton\source\repos\Katas\ProperFractions\ProperFractions\ProperFractions\bin\Debug\net8.0\ProperFractions.runtimeconfig.json
+C:\Users\chris.freckleton\source\repos\Katas\ProperFractions\ProperFractions\ProperFractions\bin\Debug\net8.0\ProperFractions.dll
+C:\Users\chris.freckleton\source\repos\Katas\ProperFractions\ProperFractions\ProperFractions\bin\Debug\net8.0\ProperFractions.pdb
+C:\Users\chris.freckleton\source\repos\Katas\ProperFractions\ProperFractions\ProperFractions\obj\Debug\net8.0\ProperFractions.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\chris.freckleton\source\repos\Katas\ProperFractions\ProperFractions\ProperFractions\obj\Debug\net8.0\ProperFractions.AssemblyInfoInputs.cache
+C:\Users\chris.freckleton\source\repos\Katas\ProperFractions\ProperFractions\ProperFractions\obj\Debug\net8.0\ProperFractions.AssemblyInfo.cs
+C:\Users\chris.freckleton\source\repos\Katas\ProperFractions\ProperFractions\ProperFractions\obj\Debug\net8.0\ProperFractions.csproj.CoreCompileInputs.cache
+C:\Users\chris.freckleton\source\repos\Katas\ProperFractions\ProperFractions\ProperFractions\obj\Debug\net8.0\ProperFractions.sourcelink.json
+C:\Users\chris.freckleton\source\repos\Katas\ProperFractions\ProperFractions\ProperFractions\obj\Debug\net8.0\ProperFractions.dll
+C:\Users\chris.freckleton\source\repos\Katas\ProperFractions\ProperFractions\ProperFractions\obj\Debug\net8.0\refint\ProperFractions.dll
+C:\Users\chris.freckleton\source\repos\Katas\ProperFractions\ProperFractions\ProperFractions\obj\Debug\net8.0\ProperFractions.pdb
+C:\Users\chris.freckleton\source\repos\Katas\ProperFractions\ProperFractions\ProperFractions\obj\Debug\net8.0\ProperFractions.genruntimeconfig.cache
+C:\Users\chris.freckleton\source\repos\Katas\ProperFractions\ProperFractions\ProperFractions\obj\Debug\net8.0\ref\ProperFractions.dll
