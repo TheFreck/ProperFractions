@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ProperFractions")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4f2bcf53971a5b0558b0377df94d901867ad7256")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4e16dcefc3a4d8d5427c93e29a990802d2819aae")]
 [assembly: System.Reflection.AssemblyProductAttribute("ProperFractions")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProperFractions")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
