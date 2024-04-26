@@ -8,9 +8,18 @@ namespace ProperFractions
 {
     public class Fractions
     {
+        static public int FindFactorsCount = 0;
+        static public int GCFCount = 0;
+
         public static long ProperFractions(long n)
         {
-            if (n < 3) return n-1;
+            //return FindFractions(n);
+            return GCFMethod(n);
+        }
+
+        public static long FindFractions(long n)
+        {
+            if (n < 3) return n - 1;
             List<long> factors = FindFactors(n);
             if (!factors.Any()) return n - 1;
             var step = 1;
@@ -21,14 +30,16 @@ namespace ProperFractions
                 if (factors.Contains(i) || FindFactors(i).Where(f => factors.Contains(f)).Any()) continue;
                 fractions++;
             }
+            Console.WriteLine($"FindFactors count: {FindFactorsCount}");
             return fractions * 2;
         }
 
         public static List<long> FindFactors(long v)
         {
+            FindFactorsCount++;
             if (v < 4) return new List<long>();
             var factors = new HashSet<long>();
-            double squirt = (double)Math.Sqrt(v);
+            var squirt = Math.Sqrt(v);
             if (squirt%1==0) factors.Add((long)squirt);
             
             var step = v % 2 == 0 ? 1 : 2;
@@ -45,69 +56,28 @@ namespace ProperFractions
             return factors.OrderBy(f => f).ToList();
         }
 
-        public static long FindFractions(long denominator)
+        public static bool GreatestCommonFactor(long item1, long item2)
         {
-            if (denominator == 1)
-                return 0;
-            long fractions = 0;
-            var numStep = denominator % 2 == 0 ? 2 : 1;
-            var divStep = denominator % 2 == 0 ? 1 : 2;
-            for (long numerator = 1; numerator <= denominator / 2; numerator += numStep)
+            GCFCount++;
+            if ((item1 % 2 == 0 && item2 % 2 == 0)|| (item1 % 3 == 0 && item2 % 3 == 0)) return true;
+            for(long i = 5; i<=item2; i+=6)
             {
-                var isReducible = false;
-                for (long divisor = 2; divisor <= numerator + divStep; divisor++)
-                {
-                    if (numerator % divisor == 0 && denominator % divisor == 0)
-                    {
-                        isReducible = true;
-                        break;
-                    }
-                }
-                if (!isReducible)
-                    fractions++;
+                if ((item1 % i == 0 && item2 % i == 0)|| (item1 % (i + 2) == 0 && item2 % (i + 2) == 0))
+                    return true;
             }
+            return false;
+        }
 
+        public static long GCFMethod(long n)
+        {
+            var fractions = n/2;
+            for(long i=n/2; i>0; i--)
+            {
+                if (GreatestCommonFactor(n, i)) 
+                    fractions--;
+            }
+            Console.WriteLine($"GCF count: {GCFCount}");
             return fractions * 2;
-        }
-
-        public static long FindEven(long n)
-        {
-            if (n == 2) return 1;
-            var factors = FindFactors(n);
-            var fractionsList = new List<int>();
-            var fractions = 0;
-            for(var i=1; i<=n/2; i+=2)
-            {
-                if (factors.Contains(i)) continue;
-                var iFactors = FindFactors(i);
-                var commonFactors = factors.Where(f => iFactors.Contains(f)).Count();
-                if (commonFactors > 0) continue;
-                fractions++;
-                fractionsList.Add(i);
-            }
-            return fractions*2;
-        }
-
-        public static long FindOdd(long n)
-        {
-            if (n == 1) return 0;
-            if (n == 2) return 1;
-            List<long> factors = FindFactors(n);
-            if (factors.Count == 0) return n - 1;
-            var step = 1;
-            if(n%2 == 0) step = 2;
-            var fractionsList = new List<int>();
-            var fractions = 0;
-            for (var i=1; i<=n/2; i+=step)
-            {
-                if (factors.Contains(i)) continue;
-                var iFactors = FindFactors(i);
-                var commonFactors = factors.Where(f => iFactors.Contains(f)).Count();
-                if (commonFactors > 0) continue;
-                fractions++;
-                fractionsList.Add(i);
-            }
-            return fractions*2;
         }
     }
 }

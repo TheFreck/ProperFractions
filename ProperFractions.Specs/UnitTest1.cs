@@ -42,36 +42,41 @@ namespace ProperFractions.Specs
     {
         Establish context = () =>
         {
-            input  = new long[] { 1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,43,45,47,49,51 };
-            expect = new long[] { 0,2,4,6,6,10,12, 8,16,18,12,22,20,18,28,30,20,24,36,24,40,42,24,46,42,32 };
-            answer = new long[input.Length];
+            input  = new long[] { 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, /*9999999, 9678930201*/ };
+            expect = new long[] { 0, 2, 4, 6, 6, 10, 12,  8, 16, 18, 12, 22, 20, 18, 28, 30, 20, 24, 36, 24, 40, 42, 24, 46, 42, 32, /*6637344, 6113006496*/ };
+            answers1 = new long[input.Length];
+            answers2 = new long[input.Length];
         };
 
         Because of = () =>
         {
             for (var i = 0; i < input.Length; i++)
             {
-                answer[i] = Fractions.ProperFractions(input[i]);
+                answers1[i] = Fractions.FindFractions(input[i]);
+                answers2[i] = Fractions.GCFMethod(input[i]);
             }
         };
 
         It Should_Return_The_Number_Of_Proper_Fractions_For_A_Given_Denominator = () =>
         {
-            for (var i = 0; i < answer.Length; i++)
+            for (var i = 0; i < answers1.Length; i++)
             {
-                if (answer[i] != expect[i])
+                if (answers1[i] != expect[i] || answers2[i] != expect[i])
                 {
                     var inp = input[i];
-                    var ans = answer[i];
+                    var ans1 = answers1[i];
+                    var ans2 = answers2[i];
                     var exp = expect[i];
                 }
-                answer[i].ShouldEqual(expect[i]);
+                answers1[i].ShouldEqual(expect[i]);
+                answers2[i].ShouldEqual(expect[i]);
             }
         };
 
         private static long[] input;
         private static long[] expect;
-        private static long[] answer;
+        private static long[] answers1;
+        private static long[] answers2;
     }
 
     public class When_Finding_Factors_Of_An_Integer
@@ -140,5 +145,47 @@ namespace ProperFractions.Specs
         private static long[] input;
         private static List<List<long>> expect;
         private static List<List<long>> answer;
+    }
+
+    public class When_Finding_The_Greatest_Common_Factor_Of_Two_Integers
+    {
+        Establish context = () =>
+        {
+            inputs = new List<(long, long)>
+            {
+                (25,10),(12,9),(14,21),(2,3),(232,46)
+            };
+            expects = new List<bool>
+            {
+                true,true,true,false,true
+            };
+            answer = new List<bool>();
+        };
+
+        Because of = () =>
+        {
+            for (var i = 0; i < inputs.Count; i++)
+            {
+                answer.Add(Fractions.GreatestCommonFactor(inputs[i].Item1, inputs[i].Item2));
+            }
+        };
+
+        It Should_Return_The_Greatest_Common_Factor = () =>
+        {
+            for (var i = 0; i < answer.Count; i++)
+            {
+                if (answer[i] != expects[i])
+                {
+                    var inp = inputs[i];
+                    var ans = answer[i];
+                    var exp = expects[i];
+                }
+                answer[i].ShouldEqual(expects[i]);
+            }
+        };
+
+        private static List<(long, long)> inputs;
+        private static List<bool> expects;
+        private static List<bool> answer;
     }
 }
